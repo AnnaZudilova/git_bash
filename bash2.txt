@@ -1,0 +1,119 @@
+3. 66@DESKTOP-TLGTTVA MINGW64 /d/Entertainment/TestingJunior10/bash (main)
+$ mkdir test3
+
+4. cd test3
+
+touch 4 5 6
+echo row1 > 4
+echo row2 >> 4
+echo row3 >> 4
+echo row4 >> 4
+cat 4
+row1
+row2
+row3
+row4
+
+echo row1 > 5
+echo row2 >> 5
+echo row3 >> 5
+echo row4 >> 5
+cat 5
+row1
+row2
+row3
+row4
+
+echo row1 > 6
+echo row2 >> 6
+echo row3 >> 6
+echo row4 >> 6
+cat 6
+row1
+row2
+row3
+row4
+
+5. grep row2 5
+row2
+
+6. grep -r "row" .  либо grep -rw "row" . (если нужно найти row как отдельное слово)
+./4:row1
+./4:row2
+./4:row3
+./4:row4
+./5:row1
+./5:row2
+./5:row3
+./5:row4
+./6:row1
+./6:row2
+./6:row3
+./6:row4
+
+7. grep -c "row" 6
+   4
+
+8. find -name 5
+./5
+
+9. find -name 5 -delete
+
+10. echo test > 4
+    cat 4
+    test
+
+11. echo fail > 4
+    cat 4
+    fail
+
+12. echo test >> 4
+    cat 4
+    fail
+    test
+
+13. ps aux у меня не сработала, показывает тоже самое, что и просто ps, поэтому нашла команду tasklist
+14. kill 14480
+15. ping rusau.net
+Обмен пакетами с rusau.net [5.181.161.75] с 32 байтами данных:
+Ответ от 5.181.161.75: число байт=32 время=80мс TTL=49
+Ответ от 5.181.161.75: число байт=32 время=56мс TTL=51
+Ответ от 5.181.161.75: число байт=32 время=76мс TTL=49
+Ответ от 5.181.161.75: число байт=32 время=60мс TTL=51
+
+Статистика Ping для 5.181.161.75:
+    Пакетов: отправлено = 4, получено = 4, потеряно = 0
+    (0% потерь)
+Приблизительное время приема-передачи в мс:
+    Минимальное = 56мсек, Максимальное = 80 мсек, Среднее = 68 мсек
+
+16. ping -n 5 rusau.net   (через -c, как в уроке, не работает через windows)
+
+Обмен пакетами с rusau.net [5.181.161.75] с 32 байтами данных:
+Ответ от 5.181.161.75: число байт=32 время=51мс TTL=51
+Ответ от 5.181.161.75: число байт=32 время=75мс TTL=49
+Ответ от 5.181.161.75: число байт=32 время=76мс TTL=49
+Ответ от 5.181.161.75: число байт=32 время=38мс TTL=51
+Ответ от 5.181.161.75: число байт=32 время=55мс TTL=50
+
+Статистика Ping для 5.181.161.75:
+    Пакетов: отправлено = 5, получено = 5, потеряно = 0
+    (0% потерь)
+Приблизительное время приема-передачи в мс:
+    Минимальное = 38мсек, Максимальное = 76 мсек, Среднее = 59 мсек 
+
+17. curl https://petstore.swagger.io/v2/pet/findByStatus?status=available,pending,sold
+18. curl -X POST "https://petstore.swagger.io/v2/user" \
+   -H "Content-Type: application/json" \  
+-d '{
+  "id": 876505,
+  "username": "Annnnna123",
+  "firstName": "Anna",
+  "lastName": "Zuuuuu",
+  "email": "ryry888e@gmail.com",
+  "password": "qwerty123",
+  "phone": "876876860",
+  "userStatus": 1
+}'
+{"code":200,"type":"unknown","message":"876505"}
+
