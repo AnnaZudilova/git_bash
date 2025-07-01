@@ -1,70 +1,70 @@
-3. pwd
-/d/Entertainment/TestingJunior10/bash
-
-4. mkdir test1
-
-5. cd test1
-
-6. touch 1 2 3
-
-7. ls
-1  2  3
-
-8. cd ..
-9. mkdir test2
-10. rmdir test2
-
-11. cd test1
+1. Determine the name of the current directory
+   pwd
+2. Create a directory named test1 inside the current directory
+   mkdir test1
+3. Navigate to the test1 directory
+   cd test1
+4. Create files 1, 2, and 3 inside the test1 directory
+   touch 1 2 3
+5. Check the contents of the test1 directory
+   ls
+6. Navigate to the home directory
+   cd ..
+7. Create a folder named test2 inside the home directory
+   mkdir test2
+8. Delete the test2 directory
+   rmdir test2
+9. Delete file 2 from the test1 directory
+   cd test1
     rm 2
-
-12. cd ..
+10. Create a folder named test3 in the home directory and add two files into it
+   cd ..
     mkdir test3
-    cd test3
+   cd test3
     touch 1 2
-13. cd ..
+11. Delete the test3 directory
+   cd ..
     rm -rf test3
-
-14. mkdir test4
-15. mv test1/1 test4
-    mv test1/3 test4
-
-16. cd test4
+12. Create a folder named test4 in the home directory
+   mkdir test4
+13. Move files 1 and 3 from the test1 directory to the test4 directory
+   mv test1/1 test4
+   mv test1/3 test4
+14. Add three lines with the word line into file 1
+   cd test4
     echo line > 1
     echo line >> 1
     echo line >> 1
-17. cat 1
+15. View the contents of file 1
+   cat 1
     line
     line
     line
-
-18. echo line > 3
-    echo line >> 3
-    echo line >> 3
-    cat 3
-    line
-    line
-    line
-
-19. cat 1 3
+16. Add three lines with the word line into file 3
+   echo line > 3
+   echo line >> 3
+   echo line >> 3
+17. View the contents of both files (1 and 3) at the same time
+   cat 1 3
     line
     line
     line
     line
     line
     line
-
-20. nano 1
-^\ Replace
-Search (to replace): line
-Replace with: kitten
-Replace this instance? All
-^X Exit
-Save modified buffer? Y Yes
-File Name to Write: 1
-cat 1
-kitten
-kitten
-kitten
+18. Using one of the text editors, replace all lines in file 1
+   nano 1
+    ^\ Replace
+      Search (to replace): line
+      Replace with: kitten
+      Replace this instance? All
+   ^X Exit
+      Save modified buffer? Y Yes
+      File Name to Write: 1
+   cat 1
+    kitten
+    kitten
+    kitten
 
  
 
